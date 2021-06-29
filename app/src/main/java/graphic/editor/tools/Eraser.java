@@ -4,10 +4,11 @@ import java.awt.*;
 
 public class Eraser {
 
-	public static void erase(Graphics g, Point current) {
+	public static void erase(Graphics2D g, Point start, Point end, int stroke) {
 		
 		g.setColor(Color.WHITE);
-		g.drawLine(current.x, current.y, current.x, current.y);
+		g.setStroke(new BasicStroke(stroke));
+		g.drawLine(start.x, start.y, end.x, end.y);
 		
 	}
 	
